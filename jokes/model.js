@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
+const Rating = require("../ratings/model");
 
 const Joke = db.define(
   "joke",
@@ -16,6 +17,8 @@ const Joke = db.define(
     tableName: "jokes"
   }
 );
+
+Joke.hasMany(Rating);
 
 module.exports = Joke;
 
