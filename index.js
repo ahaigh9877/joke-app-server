@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const db = require("./db");
 
 const jokeRouter = require("./jokes/router");
+const ratingsRouter = require("./ratings/router");
 
 const app = express();
 
@@ -15,6 +16,7 @@ const parserMiddleware = bodyParser.json();
 app.use(parserMiddleware);
 
 app.use(jokeRouter);
+app.use(ratingsRouter);
 
 const port = process.env.PORT || 4000;
 

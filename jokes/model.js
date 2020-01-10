@@ -10,6 +10,12 @@ const Joke = db.define(
     },
     punchline: {
       type: Sequelize.STRING
+    },
+    avgRating: {
+      type: Sequelize.FLOAT
+    },
+    nrRatings: {
+      type: Sequelize.INTEGER
     }
   },
   {

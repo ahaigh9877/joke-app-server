@@ -15,6 +15,4 @@ const Rating = db.define(
   }
 );
 
-// Rating.belongsTo(Joke);
-
 module.exports = Rating;
