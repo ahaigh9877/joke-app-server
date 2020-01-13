@@ -31,7 +31,7 @@ router.post("/addjoke", async (req, res, next) => {
   const joke = req.body;
   try {
     await Joke.create(joke);
-    res.send({ message: "RESSY SENDDDD" });
+    res.status(200).send({ message: "joke added to database" });
   } catch (error) {
     next(error);
   }
