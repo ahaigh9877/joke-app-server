@@ -26,4 +26,15 @@ router.get("/alljokes", async (req, res, next) => {
   }
 });
 
+router.post("/addjoke", async (req, res, next) => {
+  console.log("add joke req body ", req.body);
+  const joke = req.body;
+  try {
+    await Joke.create(joke);
+    res.send({ message: "RESSY SENDDDD" });
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;
